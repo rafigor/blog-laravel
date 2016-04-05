@@ -20,6 +20,11 @@
     @include('admin.posts._form')
 
     <div class="form-group">
+        {!! Form::label('tags', 'Tags:') !!}
+        {!! Form::textarea('tags', $post->TagList, ['class'=>'form-control']) !!}
+    </div>
+
+    <div class="form-group">
         {!! Form::submit('Save', ['class'=>'btn btn-primary']) !!}
     </div>
 
