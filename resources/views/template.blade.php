@@ -41,14 +41,7 @@
 
         <div class="row">
             <div class="col-sm-8 blog-main">
-                @yield('posts')
-<!--                <nav>
-                    <ul class="pager">
-                        <li><a href="#">Previous</a></li>
-                        <li><a href="#">Next</a></li>
-                    </ul>
-                </nav>
--->
+                @yield('content')
             </div><!-- /.blog-main -->
 
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
