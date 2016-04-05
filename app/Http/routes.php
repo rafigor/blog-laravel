@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get ('/'                       , 'PostController@index');
+    Route::get ('/'                   , ['as' => 'index'              , 'uses'=>'PostController@index']);
 
     Route::group(['prefix' => 'admin'], function(){
         Route::group(['prefix' => 'posts'], function(){

@@ -23,11 +23,8 @@
     <div class="blog-masthead">
         <div class="container">
             <nav class="blog-nav">
-                <a class="blog-nav-item active" href="#">Home</a>
-<!--                <a class="blog-nav-item" href="#">New features</a>
-                <a class="blog-nav-item" href="#">Press</a>
-                <a class="blog-nav-item" href="#">New hires</a>
-                <a class="blog-nav-item" href="#">About</a>-->
+                <a class="blog-nav-item @if(route::getCurrentRoute()->getName() ==             'index') active @endif" href="{{route('index')}}">Home</a>
+                <a class="blog-nav-item @if(route::getCurrentRoute()->getName() == 'admin.posts.index') active @endif" href="{{route('admin.posts.index')}}">Admin</a>
             </nav>
         </div>
     </div>
@@ -40,20 +37,9 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-8 blog-main">
+            <div class="col-sm-10 blog-main">
                 @yield('content')
             </div><!-- /.blog-main -->
-
-            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                <div class="sidebar-module sidebar-module-inset">
-                    <h4>Sobre</h4>
-                    <p>Blog projeto Laravel 5.2. Utilizando Bootstrap com template padrão.</p>
-                </div>
-                <div class="sidebar-module">
-                    <h4>Arquivo</h4>
-                </div>
-            </div><!-- /.blog-sidebar -->
-
         </div><!-- /.row -->
 
     </div><!-- /.container -->
